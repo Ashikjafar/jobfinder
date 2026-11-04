@@ -1,0 +1,167 @@
+
+
+# The Job Finder
+
+The Job Finder is a mobile application designed to simplify the job search process for job seekers and provide an efficient platform for employers to post vacancies and review potential candidates. Built using Flutter with a REST API backend and local Hive storage, it leverages the MVVM architecture for scalability and maintainability and integrates Riverpod for state management.
+
+## Table of Contents
+
+- [Introduction](#introduction)
+- [App Screens](#app-screens)
+- [Features](#features)
+- [Tech Stack](#tech-stack)
+- [App Architecture](#app-architecture)
+- [Setup and Installation](#setup-and-installation)
+- [How to Use](#how-to-use)
+- [Roadmap](#roadmap)
+- [Acknowledgments](#acknowledgments)
+
+---
+
+## Introduction
+
+The Job Finder addresses the challenges of traditional job-hunting by providing a centralized, user-friendly platform where:
+- **Job seekers** can search, filter, and apply for job opportunities.
+- **Employers** can post jobs, browse resumes, and connect with qualified candidates.
+
+This project is designed to bridge the gap between job seekers and employers by utilizing modern technologies like cloud computing and big data analytics.
+
+---
+
+## App Screens
+
+| <img src="https://raw.githubusercontent.com/Ruchan10/theJobFinder/master/assets/screenshots/flutter_02.png" width="45%"> | <img src="https://raw.githubusercontent.com/Ruchan10/theJobFinder/master/assets/screenshots/flutter_03.png" width="45%"> |
+
+| <img src="https://raw.githubusercontent.com/Ruchan10/theJobFinder/master/assets/screenshots/flutter_05.png" width="45%"> | <img src="https://raw.githubusercontent.com/Ruchan10/theJobFinder/master/assets/screenshots/flutter_07.png" width="45%"> |
+
+| <img src="https://raw.githubusercontent.com/Ruchan10/theJobFinder/master/assets/screenshots/flutter_06.png" width="45%"> | <img src="https://raw.githubusercontent.com/Ruchan10/theJobFinder/master/assets/screenshots/flutter_08.png" width="45%"> |
+
+
+---
+
+## Features
+
+1. **Job Search**
+   - Search jobs by location, industry, salary, and job type.
+   - Save preferences for personalized job alerts.
+
+2. **Job Posting**
+   - Employers can post job vacancies and view resumes.
+   - Review and manage applicant information.
+
+3. **Resume Upload**
+   - Job seekers can upload and update resumes for employers to review.
+
+4. **Notifications**
+   - Users receive notifications for new job postings or updates on their applications.
+
+5. **User Profiles**
+   - Create and manage detailed profiles for both employers and job seekers.
+
+6. **Filter and Sorting**
+   - Filter jobs by criteria like brand, price range, gender, and more.
+   - Sort results by recent postings, highest reviews, or lowest prices.
+
+---
+
+## Tech Stack
+
+- **Frontend**: Flutter (Dart)
+- **Backend**: REST API (Node.js/Express-style server, JWT auth) consumed with Dio
+- **Local storage**: Hive and SharedPreferences
+- **State Management**: Riverpod
+- **Architecture**: MVVM (Model-View-ViewModel)
+- **Version Control**: GitHub
+
+---
+
+## App Architecture
+
+This app follows the **MVVM Design Pattern** to ensure a clear separation of concerns:
+- **Model**: Handles data and business logic.
+- **ViewModel**: Acts as a mediator between the Model and View.
+- **View**: Displays the data to the user and interacts with the ViewModel.
+
+For state management, **Riverpod** is used to:
+- Handle dynamic updates in UI.
+- Manage user preferences and job data efficiently.
+
+---
+
+## Setup and Installation
+
+### Prerequisites
+1. Install [Flutter](https://flutter.dev/docs/get-started/install).
+2. Run the backend REST API server locally on port `3000`. The app expects the
+   routes listed in `lib/config/constants/api_endpoint.dart`.
+3. Check the API base URL in `lib/config/constants/api_endpoint.dart`
+   (`baseUrl`). The default `http://10.0.2.2:3000/` works for the Android
+   emulator. For a physical device, use your computer's LAN IP address instead.
+
+### Steps
+1. Clone the repository:
+   ```
+   git clone https://github.com/Ashikjafar/jobfinder.git
+   ```
+2. Navigate to the project directory:
+   ```
+   cd jobfinder
+   ```
+3. Install dependencies:
+   ```
+   flutter pub get
+   ```
+4. Run the app:
+   ```
+   flutter run
+   ```
+
+---
+
+## How to Use
+
+1. **Job Seekers**:
+   - Sign up and complete your profile.
+   - Search and filter jobs using the Discover page.
+   - Apply for jobs and upload your resume.
+
+2. **Employers**:
+   - Sign up as an employer and post job vacancies.
+   - Browse resumes and communicate with applicants.
+
+---
+
+## Roadmap
+
+1. **Phase 1 (Complete)**:
+   - Basic UI development.
+   - Integration with the REST API for authentication and data storage.
+
+2. **Phase 2 (In Progress)**:
+   - Implement sorting and filtering options.
+   - Replace dummy data with live data from the backend API.
+
+3. **Phase 3 (Future Enhancements)**:
+   - Add premium features for job seekers and employers.
+   - Integrate advanced analytics for job recommendations.
+
+---
+
+## 📥 **Download**
+1. Navigate to the [Releases](https://github.com/Ruchan10/theJobFinder/releases) section of this repository.  
+2. Download the latest demo APK.  
+3. Install the APK on your Android device to explore the app.
+
+---
+
+## Acknowledgments
+
+- **Original project**: Based on [Ruchan10/theJobFinder](https://github.com/Ruchan10/theJobFinder).
+- **Figma Design**: Provided .fig file as a blueprint.
+- **Dio / Hive**: Networking and local data storage.
+- **Flutter Community**: For state management solutions like Riverpod.
+
+Feel free to contribute, report issues, or provide feedback on the GitHub repository.
+
+---
+
